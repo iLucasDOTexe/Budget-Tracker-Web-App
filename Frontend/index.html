@@ -13,7 +13,7 @@
     </head>
     <body class="bg-light text-black">
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+      <!--Start Navbar-->
       <nav class="navbar navbar-expand-lg bg-white border-bottom">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Project Balance</a>
@@ -35,27 +35,41 @@
           </div>
         </div>
       </nav>
-      <div class="container text-center">
+      <!--End Navbar-->
+      <div class="container text-center mt-5">
         <div class="row">
           <div class="col bg-white border rounded-1">
-            <p>Bar Chart Container</p>
-            <!--Bar Chart Content-->
-            <div>
-              <canvas id="bar-chart"></canvas>
+            <div class="row">
+              <div class="col-sm-12 bg-white border rounded-1">
+                <p>Bar Chart Grid Container</p>
+                <div>
+                  <canvas id="bar-chart"></canvas>
+                </div>
+                <script type="module" src="src/bar-chart.js"></script>
+              </div>
             </div>
-            <script type="module" src="src/bar-chart.js"></script>
-            <!--End Bar Chart Content-->
+            <div class="row">
+              <div class="col-sm-12 bg-white border rounded-1">
+                <p>Line Chart Grid Container</p>
+                <div>
+                  <canvas id="line-chart"></canvas>
+                </div>
+                <script type="module" src="src/line-chart.js"></script>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 bg-white border rounded-1">
+                <p>Spending History Grid Container</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col bg-white border rounded-1">
-            <p>Line Chart Container</p>
-        <div class="row">
-          <div class="col bg-white border rounded-1">
-            <p>Pie Chart Container</p>
-          </div>
-          <div class="col bg-white border rounded-1">
-            <p>Spending History Container</p>
+          <div class="col-sm-4 bg-white border rounded-1">
+            <p>Pie Chart Grid Container</p>
+            <div>
+              <canvas id="pie-chart"></canvas>
+            </div>
+            <script type="module" src="src/pie-chart.js"></script>
+            <p>Hier steht Text</p>
           </div>
         </div>
       </div>
