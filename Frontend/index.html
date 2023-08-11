@@ -38,39 +38,52 @@
       <!--End Navbar-->
       <div class="container text-center mt-5">
         <div class="row">
-          <div class="col bg-white border rounded-1">
+          <div class="col">
+            <!--Start Line Chart Grid Container-->
             <div class="row">
-              <div class="col-sm-12 bg-white border rounded-1">
-                <p>Bar Chart Grid Container</p>
-                <div>
-                  <canvas id="bar-chart"></canvas>
-                </div>
-                <script type="module" src="src/bar-chart.js"></script>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-12 bg-white border rounded-1">
-                <p>Line Chart Grid Container</p>
+              <div class="col-sm-12 bg-white border rounded-1 pt-2">
+                <h4>Income And Spendings [Monthly]</h4>
                 <div>
                   <canvas id="line-chart"></canvas>
                 </div>
                 <script type="module" src="src/line-chart.js"></script>
               </div>
             </div>
+            <!--End Line Chart Grid Container-->
+            <!--Start Bar Chart Grid Container-->
             <div class="row">
-              <div class="col-sm-12 bg-white border rounded-1">
-                <p>Spending History Grid Container</p>
+              <div class="col-sm-12 bg-white border rounded-1 mt-4 pt-2">
+                <h4>Spending Categories [Monthly]</h4>
+                <div>
+                  <canvas id="bar-chart"></canvas>
+                </div>
+                <script type="module" src="src/bar-chart.js"></script>
               </div>
             </div>
+            <!--End Bar Chart Grid Container-->
+            <!--Start Spending History Grid Container-->
+            <div class="row">
+              <div class="col-sm-12 bg-white border rounded-1 mt-4 pt-2">
+                <h4>Spending History Grid Container</h4>
+                <p>Date: Spending 3: 50€</p>
+                <p>Date: Spending 2: 50€</p>
+                <p>Date: Spending 1: 50€</p>
+              </div>
+            </div>
+            <!--End Spending History Grid Container-->
           </div>
-          <div class="col-sm-4 bg-white border rounded-1">
-            <p>Pie Chart Grid Container</p>
+          <!--Start Pie Chart Grid Container-->
+          <div class="col-sm-4 h-100 d-inline-block bg-white border rounded-1 pt-2">
+            <h4>Pie Chart Grid Container</h4>
             <div>
               <canvas id="pie-chart"></canvas>
             </div>
             <script type="module" src="src/pie-chart.js"></script>
-            <p>Hier steht Text</p>
+            <p>Percentage Category Overview here</p>
+            <p>Category 1: 30%</p>
+            <p>Category 2: 10%</p>
           </div>
+          <!--End Pie Chart Grid Container-->
         </div>
       </div>
     </body>

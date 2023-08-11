@@ -1,19 +1,30 @@
 const ctx = document.getElementById('bar-chart');
 
 new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Januar 22', 'Februar 22', 'März 22', 'April 22', 'Mai 22', 'Juni 22', 'Juli 22', 'August 22', 'September 22', 'Oktober 22', 'November 22', 'Dezember 22', 'Januar 23'],
-    datasets: [{
-      label: 'Einnahmen pro Monat',
-      data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true
-      }
+    type: 'bar',
+    options: {
+        scales: {
+            x: {
+                stacked: true
+            },
+            y: {
+                stacked: true
+            }
+        }
+    },
+    data: {
+        labels: ['Januar 22', 'Februar 22', 'März 22', 'April 22', 'Mai 22', 'Juni 22', 'Juli 22', 'August 22', 'September 22', 'Oktober 22', 'November 22', 'Dezember 22', 'Januar 23'],
+        datasets: [{
+            label: 'Category 1',
+            data: [10,20,10,20,10,20,10,20,10,20,11,12,13]
+        },
+        {
+            label: 'Category 2',
+            data: [10,4,10,4,4,4,10,4,10,4,11,12,4]
+        },
+        {
+            label: 'Category 3',
+            data: [10,5,10,5,10,5,10,5,10,5,11,12,13]
+        }]
     }
-  }
 });
