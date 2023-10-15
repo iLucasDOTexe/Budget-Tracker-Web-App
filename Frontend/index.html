@@ -42,7 +42,7 @@
             <!--Start Line Chart Grid Container-->
             <div class="row">
               <div class="col-sm-12 bg-white border rounded-1 pt-2">
-                <h4>Income And Spendings [Monthly]</h4>
+                <h4>Einnahmen und Ausgaben [Monat]</h4>
                 <div>
                   <canvas id="line-chart"></canvas>
                 </div>
@@ -53,7 +53,7 @@
             <!--Start Bar Chart Grid Container-->
             <div class="row">
               <div class="col-sm-12 bg-white border rounded-1 mt-4 pt-2">
-                <h4>Spending Categories [Monthly]</h4>
+                <h4>Ausgabenkategorien [Monat]</h4>
                 <div>
                   <canvas id="bar-chart"></canvas>
                 </div>
@@ -64,39 +64,66 @@
             <!--Start Spending History Grid Container-->
             <div class="row">
               <div class="col-sm-12 bg-white border rounded-1 mt-4 mb-4 pt-2">
-                <h4>Spending History Grid Container</h4>
-                <ol class="list group">
-                  <li class="list-group-item d-flex justify-content-between align-items-start border rounded-1 mt-2 p-2">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">
-                        Spending Item Name
-                      </div>
-                      Date: Spending 1: 50€
-                    </div>
-                    <span class="badge bg-dark rounded-pill">
-                      14.10.2023
-                    </span>
-                </ol>
+                <h4>Transaktionshistorie [Monat]</h4>
+                <table class="table table-hover text-start">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col">Datum</th>
+                      <th scope="col">Titel</th>
+                      <th scope="col">Kategorie</th>
+                      <th scope="col">Wert</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-group-divider">
+                    <tr>
+                      <td>14.10.2023</td>
+                      <td>Kino</td>
+                      <td>Freizeit & Unterhaltung</td>
+                      <td>-21,00€</td>
+                    </tr>
+                    <tr>
+                      <td>13.10.2023</td>
+                      <td>Gehalt</td>
+                      <td>Einnahmen</td>
+                      <td>+2154,45€</td>
+                    </tr>
+                    <tr>
+                      <td>13.10.2023</td>
+                      <td>Tanken</td>
+                      <td>Mobilität</td>
+                      <td>-55,01€</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             <!--End Spending History Grid Container-->
           </div>
           <!--Start Pie Chart Grid Container-->
           <div class="col-sm-4 h-100 d-inline-block bg-white border rounded-1 ms-4 pt-2">
-            <h4>Pie Chart Grid Container</h4>
+            <h4>Ausgabenkategorien [Monatlich]</h4>
             <div>
               <canvas id="pie-chart"></canvas>
             </div>
             <script type="module" src="src/pie-chart.js"></script>
-            <p>Percentage Category Overview here</p>
-            <ol class="list group">
-              <li class="list-group-item d-flex justify-content-between align-items-start border rounded-1 mt-2 p-2">
-                <div class="ms-2 me-auto">
-                  <div class="fw-bold">
-                    Spending Category Name 15%
-                  </div>
-                </div>
-            </ol>
+            <table class="table table-hover text-start">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">Kategorie</th>
+                  <th scope="col">Wert</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <td>Freizeit & Unterhaltung</td>
+                  <td>21,00%</td>
+                </tr>
+                <tr>
+                  <td>Mobilität</td>
+                  <td>55,01%</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <!--End Pie Chart Grid Container-->
         </div>
