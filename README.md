@@ -7,4 +7,4 @@ A web based budget tracker and balance sheet to get an overview about your incom
 - Chart.js
 - A database (tbd)
 - Node.js
-- RaspberryPi as hosting platform
+- RaspberryPi 4b as hosting platform
