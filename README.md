@@ -3,7 +3,9 @@ A web based budget tracker and balance sheet to get an overview about your incom
 
 ## Used technologies
 - HTML
+- Bootstrap
 - CSS
 - Chart.js
 - A database (tbd)
-- A hosting platform (tbd, maybe Raspberry Pi)
+- Node.js
+- RaspberryPi 4b as hosting platform
