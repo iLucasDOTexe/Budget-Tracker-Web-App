@@ -23,16 +23,34 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" href="/legend.html">Legend</a>
+                <a class="nav-link" href="/legend.html">Legende</a>
               </li>
               <li class="nav-item">
-                <button type="button" class="btn btn-success rounded-1 fs-4 pt-0 pb-0">+</button>
+                <button type="button" class="btn btn-success rounded-1 fs-4 pt-0 pb-0" data-bs-toggle="modal" data-bs-target="#modal-add">+</button>
               </li>
             </ul>
           </div>
         </div>
       </nav>
       <!--End Navbar-->
+      <!--Start Add Modal-->
+      <div class="modal fade" id="modal-add" tabindex="-1" aria-labelledby="modal-add-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modal-add-label">Transaktion hinzufügen</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+            </div>
+            <div class="modal-body">
+              Lorem Ipsum add form here Lorem Ipsum.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success rounded-1 fs-4 pt-0 pb-0">Transaktion Speichern</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--End Add Modal-->
       <!--Start Content Container-->
       <div class="container text-center mt-5">
         <div class="row">
