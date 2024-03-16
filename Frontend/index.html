@@ -41,9 +41,53 @@
               <h1 class="modal-title fs-5" id="modal-add-label">Transaktion hinzufügen</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
+            <!--Start Add Modal Form-->
             <div class="modal-body">
-              Lorem Ipsum add form here Lorem Ipsum.
+              <form>
+                <div class="mt-3">
+                  <label for="transaction-selection" class="form-label mb-0">Transaktionsart</label>
+                  <select class="form-select" id="transaction-selection" aria-label="Transaction selection">
+                    <option value="income">Einnahme</option>
+                    <option value="spendings">Ausgabe</option>
+                  </select>
+                </div>
+                <div class="mt-3">
+                  <label for="input-title" class="form-label mb-0">Bezeichnung</label>
+                  <input type="text" class="form-control" id="input-title" aria-label="Input title">
+                </div>
+                <div class="mt-3">
+                  <label for="category-selection" class="form-label mb-0">Kategorie</label>
+                  <select class="form-select" id="category-selection" aria-label="Category selection">
+                    <option value="income">Einnahmen</option>
+                    <option value="mobility">Mobilität</option>
+                    <option value="home-entertainment">Heimunterhaltung</option>
+                    <option value="going-out">Ausgehen</option>
+                    <option value="sport-activities">Sportaktivitäten</option>
+                    <option value="real-estate">Wohnen</option>
+                    <option value="insurance">Versicherungen</option>
+                    <option value="cost-of-living">Lebenshaltungskosten</option>
+                    <option value="investing">Investments</option>
+                    <option value="telecommunication">Telekommunikation</option>
+                    <option value="media-subscription">Medienabos</option>
+                    <option value="philanthropy">Philantropie</option>
+                    <option value="financial-cost">Finanzkosten</option>
+                    <option value="vacation">Urlaub</option>
+                    <option value="education">Bildung</option>
+                    <option value="emigration">Auswanderung</option>
+                    <option value="other">Sonstiges</option>
+                  </select>
+                </div>
+                <div class="mt-3">
+                  <label for="input-date" class="form-label mb-0">Datum</label>
+                  <input type="text" class="form-control" id="input-date" aria-label="Input date">
+                </div>
+                <div class="mt-3">
+                  <label for="input-amount" class="form-label mb-0">Wert €</label>
+                  <input type="text" class="form-control" id="input-amount" aria-label="Input amount">
+                </div>
+              </form>
             </div>
+            <!--End Add Modal Form-->
             <div class="modal-footer">
               <button type="button" class="btn btn-success rounded-1 fs-4 pt-0 pb-0">Transaktion Speichern</button>
             </div>
@@ -86,7 +130,7 @@
                   <thead class="table-light">
                     <tr>
                       <th scope="col">Datum</th>
-                      <th scope="col">Titel</th>
+                      <th scope="col">Bezeichnung</th>
                       <th scope="col">Kategorie</th>
                       <th scope="col">Wert</th>
                       <th scope="col"></th>
