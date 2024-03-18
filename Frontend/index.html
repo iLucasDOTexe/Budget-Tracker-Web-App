@@ -46,7 +46,7 @@
               <form id="addModalForm">
                 <div class="mt-3">
                   <label for="transactionSelection" class="form-label mb-0">Transaktionsart</label>
-                  <select class="form-select" id="transactionSelection" onchange="disableSelection()" aria-label="Transaction selection">
+                  <select class="form-select" id="transactionSelection" aria-label="Transaction selection">
                     <option value="income">Einnahme</option>
                     <option value="spendings">Ausgabe</option>
                   </select>
@@ -203,20 +203,7 @@
       <!--End Footer-->
       <!--Start Scripts-->
       <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-      <script>
-        function disableSelection() {
-          if (this.value == 'income') {
-            document.getElementById('categorySelection').disabled = true;
-          }
-          else {
-            document.getElementById('categorySelection').disabled = false;
-          }
-        }
-      </script>
-
-
-      <!--<script type="text/javascript" src="src/app-modal-form.js"></script>-->
+      <script src="src/add-modal-form.js"></script>
       <script type="module" src="src/line-chart.js"></script>
       <script type="module" src="src/bar-chart.js"></script>
       <script type="module" src="src/pie-chart.js"></script>

@@ -1,7 +1,6 @@
-var transactionSelection = document.getElementById('transactionSelection').value;
-var categorySelection = document.getElementById('categorySelection');
+const addModalForm = document.forms.addModalForm;
 
-if (transactionSelection === "income"){
-    categorySelection.setAttribute("disabled");
-}
-else {};
+addModalForm.transactionSelection.addEventListener('change', e => {
+    let form = e.target.form;
+    form.categorySelection.disabled = (e.target.value == 'income');
+});
