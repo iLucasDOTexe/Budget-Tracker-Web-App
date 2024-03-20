@@ -33,7 +33,7 @@
         </div>
       </nav>
       <!--End Navbar-->
-      <!--Start Add Modal-->
+      <!--Start Modal-->
       <div class="modal fade" id="modal-add" tabindex="-1" aria-labelledby="modal-add-label" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -41,23 +41,23 @@
               <h1 class="modal-title fs-5" id="modal-add-label">Transaktion hinzufügen</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
             </div>
-            <!--Start Add Modal Form-->
+            <!--Start Modal Form-->
             <div class="modal-body">
-              <form>
+              <form id="ModalForm">
                 <div class="mt-3">
-                  <label for="transaction-selection" class="form-label mb-0">Transaktionsart</label>
-                  <select class="form-select" id="transaction-selection" aria-label="Transaction selection">
+                  <label for="transactionSelection" class="form-label mb-0">Transaktionsart</label>
+                  <select class="form-select" id="transactionSelection" aria-label="Transaction selection">
                     <option value="income">Einnahme</option>
                     <option value="spendings">Ausgabe</option>
                   </select>
                 </div>
                 <div class="mt-3">
-                  <label for="input-title" class="form-label mb-0">Bezeichnung</label>
-                  <input type="text" class="form-control" id="input-title" aria-label="Input title">
+                  <label for="inputTitle" class="form-label mb-0">Bezeichnung</label>
+                  <input type="text" class="form-control" id="inputTitle" aria-label="Input title">
                 </div>
                 <div class="mt-3">
-                  <label for="category-selection" class="form-label mb-0">Kategorie</label>
-                  <select class="form-select" id="category-selection" aria-label="Category selection">
+                  <label for="categorySelection" class="form-label mb-0">Kategorie</label>
+                  <select class="form-select" id="categorySelection" aria-label="Category selection" disabled>
                     <option value="income">Einnahmen</option>
                     <option value="mobility">Mobilität</option>
                     <option value="home-entertainment">Heimunterhaltung</option>
@@ -78,23 +78,27 @@
                   </select>
                 </div>
                 <div class="mt-3">
-                  <label for="input-date" class="form-label mb-0">Datum</label>
-                  <input type="text" class="form-control" id="input-date" aria-label="Input date">
+                  <label for="inputDate" class="form-label mb-0">Datum</label>
+                  <input type="text" class="form-control" id="inputDate" aria-label="Input date">
                 </div>
                 <div class="mt-3">
-                  <label for="input-amount" class="form-label mb-0">Wert €</label>
-                  <input type="text" class="form-control" id="input-amount" aria-label="Input amount">
+                  <label for="inputAmount" class="form-label mb-0">Wert €</label>
+                  <input type="text" class="form-control" id="inputAmount" aria-label="Input amount">
+                </div>
+                <div class="mt-3">
+                  <input class="form-check-input" type="checkbox" value="false" id="taxationCheck">
+                  <label class="form-check-label" for="taxationCheck">Transaktion ist steuerrelevant</label>
                 </div>
               </form>
             </div>
-            <!--End Add Modal Form-->
+            <!--End Modal Form-->
             <div class="modal-footer">
               <button type="button" class="btn btn-success rounded-1 fs-4 pt-0 pb-0">Transaktion Speichern</button>
             </div>
           </div>
         </div>
       </div>
-      <!--End Add Modal-->
+      <!--End Modal-->
       <div class="container text-center mt-5">
         <div class="row">
           <div class="col"> 
@@ -211,5 +215,8 @@
         </div>
       </footer>
       <!--End Footer-->
+      <!--Start Scripts-->
+        <script src="src/modal-form.js"></script>
+      <!--End Scripts-->
     </body>
 </html>
