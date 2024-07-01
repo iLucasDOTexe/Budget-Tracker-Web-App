@@ -36,8 +36,10 @@ app.post('/v1/newTransaction', (req, res) => {
     if(!category || !name || !value || !date || !taxational_relevant){
         res.status(418).send({message: 'Transaction not complete!'})
     }
+    
 });
 
+//Custom 404 page
 app.use((req, res) => {
     res.status(404);
     res.send('<h1>Congratulations. You searched for a side, which does not exist (404)</h1>');
