@@ -17,6 +17,11 @@ app.listen(4444, 'localhost', () => {
 app.post('/v1/newTransaction', (req, res) => {
     const {transactionType, category, name, value, date, taxational_relevant} = req.body;
 
+    //Errorhandling, if received body is not complete
+    if(!category || !name || !value || !date || !taxational_relevant){
+        res.status(418).send({message: 'Transaction not complete!'})
+    }
+
     if(transactionType == 'income'){
         sql = "INSERT INTO income(category,name,value,date,taxational_relevant) VALUES (?,?,?,?,?)"
     }else{
@@ -26,16 +31,11 @@ app.post('/v1/newTransaction', (req, res) => {
         if (err) return res.json({status: 500, success: false, error: err});
         console.log("successful input ", category, name, value, date, taxational_relevant);
     })
-
+    //Success response
     res.send({
         status: '200 - Transaction saved!',
         body: {category, name, value, date, taxational_relevant}
     });
-    
-    //Errorhandling, if received body is not complete
-    if(!category || !name || !value || !date || !taxational_relevant){
-        res.status(418).send({message: 'Transaction not complete!'})
-    }
     
 });
 
