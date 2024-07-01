@@ -19,9 +19,10 @@ app.post('/v1/newTransaction', (req, res) => {
 
     //Errorhandling, if received body is not complete
     if(!category || !name || !value || !date || !taxational_relevant){
-        res.status(418).send({message: 'Transaction not complete!'})
+        res.status(418).send({message: 'Transaction body content not complete!'})
     }
-
+    
+    //Writing received data into database
     if(transactionType == 'income'){
         sql = "INSERT INTO income(category,name,value,date,taxational_relevant) VALUES (?,?,?,?,?)"
     }else{
@@ -31,6 +32,7 @@ app.post('/v1/newTransaction', (req, res) => {
         if (err) return res.json({status: 500, success: false, error: err});
         console.log("successful input ", category, name, value, date, taxational_relevant);
     })
+
     //Success response
     res.send({
         status: '200 - Transaction saved!',
