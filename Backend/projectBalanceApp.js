@@ -16,8 +16,8 @@ app.listen(4444, 'localhost', () => {
 //Receiving a new transaction and saving it into the database
 app.post('/v1/newTransaction', (req, res) => {
     const {transactionType, category, name, value, date, taxational_relevant} = req.body;
-   
-    if(transactionType == 'Einnahme'){
+
+    if(transactionType == 'income'){
         sql = "INSERT INTO income(category,name,value,date,taxational_relevant) VALUES (?,?,?,?,?)"
     }else{
         sql = "INSERT INTO spendings(category,name,value,date,taxational_relevant) VALUES (?,?,?,?,?)"

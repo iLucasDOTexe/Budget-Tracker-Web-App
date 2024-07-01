@@ -8,28 +8,27 @@ ModalForm.transactionSelection.addEventListener('change', e => {
 
 checkbox.addEventListener('change', e => {
     if (e.currentTarget.checked) {
-        checkbox.value = 'true'
+        checkbox.value = 1
     }
     else {
-        checkbox.value = 'false'
+        checkbox.value = 0
     }
 });
 
 function sendFormData(event) {
-    event.preventDefault(); // Verhindert das Standard-Formular-Submit-Verhalten
-
+    event.preventDefault();
+    const parts = ModalForm.inputDate.value.split('.');
     const formData = {
         transactionType: ModalForm.transactionSelection.value,
         name: ModalForm.inputTitle.value,
         category: ModalForm.categorySelection.value,
-        date: ModalForm.inputDate.value,
-        value: ModalForm.inputAmount.value,
-        taxation_relevant: checkbox.value
+        date: `${parts[2]}-${parts[1]}-${parts[0]}`,
+        value: ModalForm.inputAmount.value.replace(',', '.'),
+        taxational_relevant: checkbox.value
     };
-
     const jsonData = JSON.stringify(formData);
 
-    fetch('http://localhost:4444/v1/newTransaction', { // Ersetzen Sie 'YOUR_SERVER_ENDPOINT' durch Ihre Server-URL
+    fetch('http://localhost:4444/v1/newTransaction', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -39,10 +38,8 @@ function sendFormData(event) {
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
-        // Fügen Sie hier die Logik hinzu, die nach erfolgreichem Senden der Daten ausgeführt werden soll
     })
     .catch((error) => {
         console.error('Error:', error);
-        // Fügen Sie hier die Fehlerbehandlungslogik hinzu
     });
 }
